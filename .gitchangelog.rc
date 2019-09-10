@@ -60,6 +60,7 @@ ignore_regexps = [
     r'@wip', r'!wip',
     r'[cC]ode\s[cC]limate',
     r'^(.{3,3}\s*:)?\s*[fF]irst commit.?\s*$',
+    r'^(.{3,3}\s*:)?\s*[iI]nitial commit.?\s*$',
     r'^$',  ## ignore commits with empty messages
 ]
 
@@ -152,7 +153,7 @@ subject_process = (strip |
 ##
 ## Tags that will be used for the changelog must match this regexp.
 ##
-tag_filter_regexp = r'^[0-9]+\.[0-9]+(\.[0-9]+)?$'
+tag_filter_regexp = r'^v[0-9]+\.[0-9]+(\.[0-9]+)?$'
 
 
 ## ``unreleased_version_label`` is a string or a callable that outputs a string
@@ -238,7 +239,7 @@ include_merge = False
 ##
 ##   - FileRegexSubst(file, pattern, replace, flags)
 ##
-##        Apply a replace inplace in the given file. Your regex pattern must
+##        Apply a replace in-place in the given file. Your regex pattern must
 ##        take care of everything and might be more complex. Check the README
 ##        for a complete copy-pastable example.
 ##
@@ -254,7 +255,7 @@ publish = FileInsertIntoFirstRegexMatch(
 ## callable will be called to resolve as strings and allow dynamical
 ## computation of these. The result will be used as revisions for
 ## gitchangelog (as if directly stated on the command line). This allows
-## to filter exaclty which commits will be read by gitchangelog.
+## to filter exactly which commits will be read by gitchangelog.
 ##
 ## To get a full documentation on the format of these strings, please
 ## refer to the ``git rev-list`` arguments. There are many examples.
