@@ -1,0 +1,2 @@
+gitchangelog==3.0.4
+pystache==0.5.4
