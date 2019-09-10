@@ -27,5 +27,7 @@ The format is based on `Keep a Changelog`__, and this project adheres to `Semant
 
 {{/versions}}
 
+{{#general_title}}
 __ https://keepachangelog.com/en/1.0.0/
 __ https://semver.org/spec/v2.0.0.html
+{{/general_title}}
