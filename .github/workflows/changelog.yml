@@ -16,11 +16,10 @@ jobs:
       with:
         python-version: 3.7
     - name: Generate changelog
+      id: changelog
       run: |
         pip install gitchangelog pystache
         gitchangelog
-      env:
-        CHANGELOG: ${{ gitchangelog}}
     - name: Upload Changelog as an artifact
       uses: actions/upload-artifact@master
       with:
@@ -31,4 +30,4 @@ jobs:
       with:
         github-token: ${{github.token}}
         script: |
-          github.issues.createComment({...context.issue, body: ${{ CHANGELOG }} })
+          github.issues.createComment({...context.issue, body: ${{ steps.changelog.outputs }} })
