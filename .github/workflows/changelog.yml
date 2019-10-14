@@ -24,7 +24,7 @@ jobs:
       with:
         name: changelog
         path: CHANGELOG.rst
-    - name: Post comment to
+    - name: Post comment to PR
       uses: actions/github-script@0.2.0
       with:
         github-token: ${{github.token}}
