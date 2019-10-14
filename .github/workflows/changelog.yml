@@ -26,7 +26,7 @@ jobs:
         path: CHANGELOG.rst
     - name: Post comment to
       uses: actions/github-script@0.2.0
-        with:
-          github-token: ${{github.token}}
-          script: |
-            github.issues.createComment({...context.issue, body: gitchangelog})
+      with:
+        github-token: ${{github.token}}
+        script: |
+          github.issues.createComment({...context.issue, body: gitchangelog})
