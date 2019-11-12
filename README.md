@@ -1,6 +1,6 @@
 # changelog
 
-Repo for trying out changelog processes
+Repo for trying out changelog processes README DIFF.
 
 We want to create changelogs for our projects to make it easier to follow along with what is happening.
 
