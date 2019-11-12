@@ -2,6 +2,8 @@ name: Create changelog
 
 on:
   pull_request:
+    branches:
+      - 'release/*'
     types: [opened, review_requested, ready_for_review, edited]
 
 jobs:
